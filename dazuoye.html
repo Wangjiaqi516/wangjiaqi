@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+    a {
+      text-decoration: none;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    #banner {
+      width: 1000px;
+
+      height: 500px;
+
+      margin: 10px auto;
+    }
+
+    #content {
+      width: 1000px;
+
+      height: 500px;
+
+      overflow: hidden;
+
+      position: relative;
+    }
+
+    #ul {
+      height: 500px;
+
+      position: absolute;
+
+      left: 0;
+    }
+
+    #ul li {
+      list-style: none;
+
+      width: 1000px;
+
+      height: 500px;
+
+      float: left;
+    }
+
+    #ul img {
+      width: 1000px;
+
+      height: 500px;
+    }
+
+    .btn {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      cursor: pointer;
+    }
+
+    .btn img {
+      width: 100px;
+      height: 100px;
+    }
+
+    #left {
+      top: 200px;
+      left: 50px;
+    }
+
+    #right {
+      top: 200px;
+      right: 50px;
+    }
+
+    #dotul {
+      width: 500px;
+      position: relative;
+      left: 280px;
+      top: 450px;
+    }
+
+    #dotul li {
+      list-style: none;
+      float: left;
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      background-color: seagreen;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+
+    ul {
+      list-style-type: none;
+    }
+
+    .clear:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+    }
+
+    body {
+      background-color: #f3f5f7;
+    }
+
+    .topone {
+      width: 1200px;
+      height: 99px;
+      margin: 0 auto;
+    }
+
+    .topone>p {
+      display: inline-block;
+      font-size: 40px;
+      font-family: Microsoft YaHei;
+      font-weight: bold;
+      color: #000000;
+      width: 170px;
+      padding: 20px 11px 29px 9px;
+      float: left;
+    }
+
+    .topone ul {
+      height: 30px;
+      width: 285px;
+      margin-top: 35px;
+      margin-bottom: 35px;
+      margin-left: 60px;
+      float: left;
+    }
+
+    .topone ul>li {
+      text-align: center;
+      font-size: 18px;
+      margin-right: 28px;
+      float: left;
+    }
+
+    .topone ul>li a {
+      display: inline-block;
+      color: #050505;
+      padding: 0 8px 10px 8px;
+    }
+
+    .topone>a {
+      font-size: 15px;
+      height: 12px;
+      width: 60px;
+      color: #666666;
+      margin: 40px 12px 45px 31px;
+      float: right;
+    }
+
+    .topone>.box .subimt {
+      width: 50px;
+      height: 40px;
+      margin: 30px 0 30px 0;
+      border: 1.5px solid #000000;
+      float: right;
+      background: #00a4ff url(./search.png) no-repeat center center;
+    }
+
+    .search {
+      width: 360px;
+      height: 37px;
+      font-size: 15px;
+      margin: 30px 0 30px 0;
+      border: 1.5px solid #000000;
+      float: right;
+    }
+
+    .b {
+      width: 100%;
+      height: 420px;
+      background: #fff;
+    }
+
+    .b>.big {
+      width: 1500px;
+      height: 420px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .b>.big img {
+      position: absolute;
+      left: 30px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .b>.big .mulu {
+      position: absolute;
+      left: 0;
+      width: 190px;
+      height: 420px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .b>.big .mulu ul {
+      height: 365px;
+      width: 100px;
+      margin: 27px 21px 28px 20px;
+    }
+
+    .b>.big li {
+      width: 150px;
+      height: 22px;
+      margin-bottom: 20.8px;
+      font-size: 14px;
+      position: relative;
+    }
+
+    .jing {
+      width: 1200px;
+      height: 270px;
+      margin: 0 auto;
+      padding-bottom: 15px;
+      background-color: #f3f5f7;
+    }
+
+    .jing .box {
+      width: 228px;
+      height: 270px;
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0px 2px 5px 0px rgba(118, 118, 118, 0.5);
+      margin-right: 15px;
+      float: right;
+    }
+
+    .jing .last {
+      margin-right: 0px;
+    }
+
+    .jing .box>img {
+      width: 228px;
+      height: 155px;
+    }
+
+    .jing .box>a {
+      display: inline-block;
+      width: 185px;
+      height: 34px;
+      font-size: 15px;
+      font-family: Microsoft YaHei;
+      font-weight: 400;
+      color: rgba(5, 5, 5, 1);
+      line-height: 20px;
+      margin: 24px 22px 18px 22px;
+    }
+
+    .ji {
+      height: 22px;
+      width: 1200px;
+      margin: 0 auto;
+      padding: 22px 0 18px 0;
+      position: relative;
+    }
+
+    .ji>a {
+      width: 48px;
+      height: 13px;
+      font-size: 12px;
+      font-family: Microsoft YaHei;
+      font-weight: 400;
+      color: rgba(165, 165, 165, 1);
+      position: absolute;
+      right: 35px;
+      bottom: 17px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topone clear">
+    <p><img src="./logo.png"></p>
+    <ul class="clear">
+      <li><a href="#">首页</a></li>
+      <li><a href="#">商城</a></li>
+      <li><a href="#">视频</a></li>
+      <li><a href="#">比赛</a></li>
+      <li><a href="#">社区</a></li>
+      <li><a href="#">资料</a></li>
+    </ul>
+    <a href="#">个人中心</a>
+    <form class="box clear">
+      <input type="button" class="subimt">
+      <input class="search" name="search " placeholder="     输入关键词" />
+    </form>
+  </div>
+  </div>
+  <div class="b">
+    <div id="banner">
+      <div id="content">
+        <ul id="ul">
+          <li>
+            <a href="###"><img src="./timg.jpg" /></a>
+          </li>
+          <li>
+            <a href="###"><img src="./1.jpg"></a>
+          </li>
+        </ul>
+        <div class="dot" id="dot">
+          <ul id="dotul">
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div id="btn">
+          <div id="left" class="btn"><img src="./prev.png" /></div>
+          <div id="right" class="btn"><img src="./next.png" /></div>
+        </div>
+      </div>
+      <div class="ji clear">
+        <p>季后赛TOP5</p>
+        <a href="#">查看全部</a>
+      </div>
+      <div class="jing clear">
+        <div class="box" id="a">
+          <img class="pimg" src="./uzi.jpg" alt="">
+          <a href="#"> RNG·Uzi </a>
+        </div>
+        <div class="box" id="a">
+          <img class="pimg" src="./clearlove.jpg" alt="">
+          <a href="#">EDG·clearlove</a>
+        </div>
+        <div class="box" id="a">
+          <img class="pimg" src="./xiaohu.jpg" alt="">
+          <a href="#">RNG·xiaohu</a>
+        </div>
+        <div class="box" id="a">
+          <img class="pimg" src="./MLXG.jpg" alt="">
+          <a href="#">RNG·MLXG</a>
+        </div>
+        <div class="box last">
+          <img class="pimg" src="./letme.jpg" alt="">
+          <a href="#">RNG·LETME</a>
+        </div>
+      </div>
+</body>
+<script>
+  //定义所有需要用到的数据
+  var animationSpeed = 1; //一次切换的图片数（就是下一张图片的间隔）
+  var minSpeed = 5; //就是每次left增加或减少的数
+  var stopTime = 5000; //要隔多少秒开始切换下一张图片
+  //页面元素
+  var prev = document.getElementById("left");
+  var next = document.getElementById("right");
+  var banzer = document.getElementById("banner");
+  var content = document.getElementById("content");
+  var imgul = document.getElementById("ul");
+  var imgli = document.getElementById("ul").getElementsByTagName("li");
+  var liwidth = document.getElementById("ul").getElementsByTagName("li")[0]
+    .offsetWidth;
+  var dot = document.getElementById("dot");
+  var dotul = document.getElementById("dotul");
+  var dotli = document.getElementById("dotul").getElementsByTagName("li");
+  var length = document.getElementById("dotul").getElementsByTagName("li").length;
+  var type = true; //是否可以渲染
+  var nextTimer = null;
+  var prevTimer = null;
+  var mainTimer = null;
+  imgul.style.width = liwidth * length + "px"; //将ul的宽度设置为所有照片宽度的总和
+  //给每一个dotli添加一个index属性，方便改变小圆点的背景颜色
+  for (var i = 0; i < length; i++) {
+    imgli[i].index = i;
+    dotli[i].index = i;
+  }
+  //给第一个小圆点加上背景
+  changeColor(imgli[0]);
+  next.onclick = function (ev) {
+    if (type) {
+      liwidth = 0;
+      clearInterval(nextTimer); //先把上一次留下来的定时器清除（确保清除干净—）
+      nextTimer = setInterval(nextImg, animationSpeed);
+      type = false;
+      changeColor(imgli[1]); //改变原点颜色
+    }
+  };
+  function nextImg() {
+    imgul.style.left = "-" + liwidth + "px";
+    liwidth += minSpeed;
+    if (liwidth >= imgli[0].offsetWidth) {
+      clearInterval(nextTimer);
+      imgul.appendChild(imgli[0]); //先删除imgli[0],然后加到末尾来，这样实现了循环
+      imgul.style.left = 0;
+      type = true;
+    }
+  }
+  prev.onclick = function (ev) {
+    if (type) {
+      //如果可以渲染
+      imgul.insertBefore(imgli[length - 1], imgli[0]); //因为当前图片的位置一直都是imgli[0]，所以按照循环的思想，上一张就是imli[length-1]
+      clearInterval(prevTimer);
+      liwidth = imgli[0].offsetWidth;
+      prevTimer = setInterval(prevImg, animationSpeed);
+      type = false; //因为设置了定时器，定时器在渲染，所以这时不能被渲染
+      changeColor(imgli[1]); //改变原点颜色
+    }
+  };
+  function prevImg() {
+    imgul.style.left = "-" + liwidth + "px";
+    liwidth -= minSpeed;
+    if (liwidth <= -1) {
+      clearInterval(prevTimer);
+      imgul.style.left = 0;
+      type = true; //定时器已经完成渲染了，所以此时可以渲染
+    }
+  }
+  mainTimer = setInterval(next.onclick, 5000);
+  function changeColor(target) {
+    for (var j = 0; j < length; j++) {
+      dotli[j].className = "";
+    }
+    dotli[target.index].className = "active";
+  }
+  //为每个小圆点添加点击事件
+  dot.onclick = function (ev) {
+    var ev = ev || window.event;
+    var target = ev.target || ev.srcElement;
+    if (target.nodeName.toLowerCase() == "li") {
+      if (type) {
+        showImg(target.index);
+        changeColor(target);
+        type = true;
+      }
+    }
+  };
+  //根据参数显示对应的图片。
+  function showImg(inde) {
+    var this_li = imgli[0].index;
+    //把第一个元素放到最后面。
+    if (inde > this_li) {
+      var x = inde - this_li;
+      for (var y = 0; y < x; y++) {
+        imgul.appendChild(imgli[0]);
+      }
+    }
+    //把最后一个元素放到第一的位置
+    if (inde < this_li) {
+      var x_x = this_li - inde;
+      for (var g = 0; g < x_x; g++) {
+        imgul.insertBefore(imgli[length - 1], imgli[0]);
+      }
+    }
+  }
+
+  //当鼠标移入图片区域时，清除定时器。鼠标移出时恢复定时器
+  content.onmouseover = function (ev) {
+    clearInterval(mainTimer);
+  };
+
+  content.onmouseout = function (ev) {
+    mainTimer = setInterval(next.onclick, stopTime);
+  };
+</script>
+<script>
+  (function (window, document, undefined) {
+    var hearts = [];
+    window.requestAnimationFrame = (function () {
+      return (
+        window.requestAnimationFram,
+        window.webkitRequestAnimationFrame,
+        window.mozRequestAnimationFrame,
+        window.oRequestAnimationFrame,
+        window.msRequestAnimationFrame,
+        function (callback) {
+          setTimeout(callback, 1000 / 60);
+        }
+      );
+    })();
+    init();
+    function init() {
+      css(
+        ".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}"
+      );
+      attachEvent();
+      gameloop();
+    }
+    function gameloop() {
+      for (var i = 0; i < hearts.length; i++) {
+        if (hearts[i].alpha <= 0) {
+          document.body.removeChild(hearts[i].el);
+          hearts.splice(i, 1);
+          continue;
+        }
+        hearts[i].y--;
+        hearts[i].scale += 0.004;
+        hearts[i].alpha -= 0.013;
+        hearts[i].el.style.cssText =
+          "left:" +
+          hearts[i].x +
+          "px;top:" +
+          hearts[i].y +
+          "px;opacity:" +
+          hearts[i].alpha +
+          ";transform:scale(" +
+          hearts[i].scale +
+          "," +
+          hearts[i].scale +
+          ") rotate(45deg);background:" +
+          hearts[i].color;
+      }
+      requestAnimationFrame(gameloop);
+    }
+    function attachEvent() {
+      var old = typeof window.onclick === "function" && window.onclick;
+      window.onclick = function (event) {
+        old && old();
+        createHeart(event);
+      };
+    }
+    function createHeart(event) {
+      var d = document.createElement("div");
+      d.className = "heart";
+      hearts.push({
+        el: d,
+        x: event.clientX - 5,
+        y: event.clientY - 5,
+        scale: 1,
+        alpha: 1,
+        color: randomColor(),
+      });
+      document.body.appendChild(d);
+    }
+    function css(css) {
+      var style = document.createElement("style");
+      style.type = "text/css";
+      try {
+        style.appendChild(document.createTextNode(css));
+      } catch (ex) {
+        style.styleSheet.cssText = css;
+      }
+      document.getElementsByTagName("head")[0].appendChild(style);
+    }
+    function randomColor() {
+      return (
+        "rgb(" +
+        ~~(Math.random() * 255) +
+        "," +
+        ~~(Math.random() * 255) +
+        "," +
+        ~~(Math.random() * 255) +
+        ")"
+      );
+    }
+  })(window, document);
+</script>
+<script>
+  $(function () {
+    $(".pimg").click(function () {
+      var _this = $(this); //将当前的pimg元素作为_this传入函数
+      imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);
+    });
+  });
+
+  function imgShow(outerdiv, innerdiv, bigimg, _this) {
+    var src = _this.attr("src"); //获取当前点击的pimg元素中的src属性
+    $(bigimg).attr("src", src); //设置#bigimg元素的src属性
+
+    /*获取当前点击图片的真实大小，并显示弹出层及大图*/
+    $("<img/>")
+      .attr("src", src)
+      .load(function () {
+        var windowW = $(window).width(); //获取当前窗口宽度
+        var windowH = $(window).height(); //获取当前窗口高度
+        var realWidth = this.width; //获取图片真实宽度
+        var realHeight = this.height; //获取图片真实高度
+        var imgWidth, imgHeight;
+        var scale = 0.8; //缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放
+
+        if (realHeight > windowH * scale) {
+          //判断图片高度
+          imgHeight = windowH * scale; //如大于窗口高度，图片高度进行缩放
+          imgWidth = (imgHeight / realHeight) * realWidth; //等比例缩放宽度
+          if (imgWidth > windowW * scale) {
+            //如宽度扔大于窗口宽度
+            imgWidth = windowW * scale; //再对宽度进行缩放
+          }
+        } else if (realWidth > windowW * scale) {
+          //如图片高度合适，判断图片宽度
+          imgWidth = windowW * scale; //如大于窗口宽度，图片宽度进行缩放
+          imgHeight = (imgWidth / realWidth) * realHeight; //等比例缩放高度
+        } else {
+          //如果图片真实高度和宽度都符合要求，高宽不变
+          imgWidth = realWidth;
+          imgHeight = realHeight;
+        }
+        $(bigimg).css("width", imgWidth); //以最终的宽度对图片缩放
+
+        var w = (windowW - imgWidth) / 2; //计算图片与窗口左边距
+        var h = (windowH - imgHeight) / 2; //计算图片与窗口上边距
+        $(innerdiv).css({ top: h, left: w }); //设置#innerdiv的top和left属性
+        $(outerdiv).fadeIn("fast"); //淡入显示#outerdiv及.pimg
+
+        $(outerdiv).click(function () {
+          //再次点击淡出消失弹出层
+          $(this).fadeOut("fast");
+        });
+      });
+  }
+
+</script>
+
+</html>
